@@ -22,10 +22,11 @@ public class MainActivity extends AppCompatActivity {
         txvshow = findViewById(R.id.txvshow);
 
         favorite = getResources().getStringArray(R.array.favorite);
-        ArrayAdapter<String> ad = new ArrayAdapter<>(this, android.R.layout.simple_list_item_single_choice, favorite);
+        //ArrayAdapter<String> ad = new ArrayAdapter<>(this, android.R.layout.simple_list_item_single_choice, favorite);
+        ArrayAdapter<String> ad = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice,favorite);
         ls.setAdapter(ad);
-        ls.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-
+        //ls.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        ls.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
     }
 
